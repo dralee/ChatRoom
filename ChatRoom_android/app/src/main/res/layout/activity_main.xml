@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
+    tools:context="com.lee.jackie.chatroom.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="用户名"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout"
+        />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_user_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/btn_logout"
+        android:id="@+id/btn_logout"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        app:layout_constraintStart_toEndOf="@id/tv_user_name"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_recv_name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="接收用户"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout"
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_recv_name"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/tv_recv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        >
+    </Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_refresh"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="2dp"
+        android:text="@string/btn_refresh"
+        app:layout_constraintStart_toEndOf="@id/sp_recv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_send"
+        android:id="@+id/btn_send"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        app:layout_constraintStart_toEndOf="@id/btn_refresh"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_msg"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="消息"
+        app:layout_constraintTop_toBottomOf="@id/tv_recv_name"
+        app:layout_constraintStart_toStartOf="@id/constraintLayout"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:id="@+id/et_msg"
+        app:layout_constraintTop_toBottomOf="@id/sp_recv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_msg"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_marginStart="16dp"
+        android:inputType="textMultiLine"
+        android:id="@+id/et_msg_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_msg"
+        app:layout_constraintStart_toEndOf="@id/constraintLayout"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -8,6 +8,8 @@ using Common;
 
 namespace Server.Controllers
 {
+    // CreatedBy:  Jackie Lee£¨ÌìÓîß[ıˆ£©
+    // CreatedOn: 2017.07.24
     [Route("[controller]/[action]")]
     public class MessageController : Controller
     {

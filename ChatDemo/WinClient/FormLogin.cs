@@ -12,6 +12,8 @@ using WinClient.Manage;
 
 namespace WinClient
 {
+    // CreatedBy:  Jackie Lee（天宇遊龍）
+    // CreatedOn: 2017.07.24
     public partial class FormLogin : Form
     {
         public FormLogin()

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace WebClient
 {
+    // CreatedBy:  Jackie Lee（天宇遊龍）
+    // CreatedOn: 2017.07.24
     public class ApiAuthCheckAttribute : Attribute, IActionFilter
     {
         public void OnActionExecuted(ActionExecutedContext context)

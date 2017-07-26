@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace WinClient.Manage
 {
-    // Jackie Lee 2017.07.24
+    // CreatedBy:  Jackie Lee（天宇遊龍）
+    // CreatedOn: 2017.07.24
     /// <summary>
     /// 管理
     /// </summary>

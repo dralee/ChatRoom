@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ChatRoom</string>
+    <string name="server_ip">192.168.1.119:808</string>
+    <string name="btn_send">发送</string>
+    <string name="btn_refresh">刷新</string>
+    <string name="btn_logout">注销</string>
+</resources>

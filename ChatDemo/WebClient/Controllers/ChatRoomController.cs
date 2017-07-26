@@ -11,6 +11,8 @@ using Common;
 
 namespace WebClient.Controllers
 {
+    // CreatedBy:  Jackie Lee（天宇遊龍）
+    // CreatedOn: 2017.07.24
     public class ChatRoomController : Controller
     {
         public IActionResult Index()
@@ -74,19 +76,6 @@ namespace WebClient.Controllers
             var user = buffer.FromBuffer().FromJson<User>();
             return user;
         }
-
-        //private static List<User> _users = new List<User>
-        //{
-        //    new User{Id=0,UserName="所有人"},
-        //    new User{Id=1,UserName="User01"},
-        //    new User{Id=2,UserName="User02"},
-        //    new User{Id=3,UserName="User03"},
-        //    new User{Id=4,UserName="User04"},
-        //    new User{Id=5,UserName="User05"},
-        //    new User{Id=6,UserName="User06"},
-        //    new User{Id=7,UserName="User07"},
-        //    new User{Id=8,UserName="User08"}
-        //};
 
         private static long _queueID;
 
