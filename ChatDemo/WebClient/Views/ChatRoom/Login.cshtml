@@ -1,0 +1,47 @@
+﻿@model WebClient.Controllers.ViewUser
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+<div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form id="form" method="post" action="/ChatRoom/Login">
+        <input type="hidden" id="Id" name="Id" />
+        <input type="hidden" id="UserName" name="UserName" />
+    </form>
+    <div><span>用户名</span><select id="user"></select></div>
+    <div><input type="button" id="login" value="Login" /></div>
+    <div><span id="errMsg"></span></div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.get("/ChatRoom/Users", function (data) {
+            var su = $("#user");
+            $.each(data, function (i, e) {
+                var option = "<option value='" + e.id + "'>" + e.userName + "</option>";
+                su.append(option);
+            });
+        });
+
+        $("#login").click(function () {
+            var f = $("#user").find("option:selected");
+            //var from = f.val();
+            //var fromName = f.text();
+            //$.post("/ChatRoom/Login", { id: from, userName: fromName }, function (data) {
+            //    if (data.success) {
+            //    }
+            //    $("#message").append("<div>[" + fromName + "] to [" + t.text() + "] : " + content + "</div>");
+            //});
+            $("#Id").val(f.val());
+            $("#UserName").val(f.text());
+
+            $("#form").submit();
+        });
+    });
+
+</script>
