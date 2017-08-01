@@ -1,5 +1,6 @@
 # ChatRoom
 ChatRoom by asp.net core simple using long connection.
+## the introduction of the blogs(http://www.cnblogs.com/dralee/p/7268406.html)
 
 # Web Client
 ![Webclient icon](https://github.com/dralee/ChatRoom/blob/master/Images/1.png)
